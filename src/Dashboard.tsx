@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Box, Upload, Loader2 } from 'lucide-react';
 import { useTours } from './hooks/useTours';

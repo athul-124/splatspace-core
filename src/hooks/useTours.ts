@@ -18,6 +18,13 @@ export function useTours() {
     try {
       setLoading(true);
       setError(null);
+      if (!supabase) {
+        setTours([
+          { id: '1', name: 'Luxury Villa - Beverly Hills', description: '4 bed, 4 bath, Pool', url: 'https://huggingface.co/datasets/dylanebert/3dgs/resolve/main/kitchen/kitchen-7k.splat' },
+          { id: '2', name: 'Porsche 911 GT3 RS', description: 'Showroom lighting, detailed interior', url: 'https://huggingface.co/datasets/dylanebert/3dgs/resolve/main/kitchen/kitchen-7k.splat' }
+        ]);
+        return;
+      }
       const { data, error: err } = await supabase
         .from('tours')
         .select('*')
@@ -43,6 +50,11 @@ export function useTours() {
   const addTour = async (tour: Omit<Tour, 'id' | 'created_at'>) => {
     try {
       setError(null);
+      if (!supabase) {
+         const newTour = { ...tour, id: Math.random().toString() };
+         setTours(prev => [newTour, ...prev]);
+         return { data: newTour, error: null };
+      }
       const { data, error: err } = await supabase
         .from('tours')
         .insert([tour])

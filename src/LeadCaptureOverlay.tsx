@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Target, Loader2 } from 'lucide-react';
 
 export default function LeadCaptureOverlay() {
