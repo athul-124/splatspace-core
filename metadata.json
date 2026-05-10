@@ -1,0 +1,6 @@
+{
+  "name": "SplatSpace",
+  "description": "3D Gaussian Splatting (3DGS) SaaS platform for interactive photorealistic tours and lead generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

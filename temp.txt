@@ -1,0 +1,6 @@
+node_modules/.vite/deps/chunk-C43FICMT.js:17103:        this.hls.config.startFragPrefetch = true;
+node_modules/.vite/deps/chunk-FXIAH3VU.js:26730:    if (typeof fetch === "undefined") {
+node_modules/.vite/deps/react-router-dom.js:1607:      router2.fetch = instrumentedFetch;
+node_modules/.vite/deps/react-router-dom.js:9919:    if (prefetch === "render") {
+node_modules/.vite/deps/react-router-dom.js:9922:    if (prefetch === "viewport") {
+node_modules/.vite/deps/react-router-dom.js:10781:    prefetch = "none",

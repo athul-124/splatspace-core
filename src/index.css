@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    --bg-main: #09090b; /* zinc-950 */
+    --fg: #fafafa; /* zinc-50 */
+    --accent: #eab308; /* yellow-500, a bit more premium than ffff00 */
+  }
+
+  body {
+    @apply bg-zinc-950 text-zinc-50 font-sans selection:bg-yellow-500 selection:text-zinc-950;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-zinc-950 border-l-[2px] border-zinc-800;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-zinc-700;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-yellow-500;
+  }
+}
+
+@layer components {
+  .neo-brutal {
+    @apply border-4 border-zinc-800 bg-zinc-950 shadow-[8px_8px_0px_#18181b];
+  }
+  
+  .neo-brutal-yellow {
+    @apply border-4 border-zinc-950 shadow-[8px_8px_0px_#18181b] bg-yellow-400 text-zinc-950;
+  }
+
+  .accent-text {
+    @apply font-black uppercase tracking-tight;
+  }
+
+  .stat-label {
+    @apply font-bold text-xs uppercase opacity-70 tracking-wider;
+  }
+
+  .brutal-btn {
+    @apply border-4 border-zinc-950 shadow-[8px_8px_0px_#18181b] bg-yellow-400 text-zinc-950 font-black uppercase tracking-wider px-6 py-4 transition-transform duration-75 active:translate-y-1 active:translate-x-1 active:shadow-none focus:outline-none hover:bg-yellow-300;
+  }
+
+  .brutal-input {
+    @apply w-full bg-zinc-900 text-zinc-50 border-4 border-zinc-800 px-5 py-4 placeholder-zinc-500 focus:outline-none focus:border-yellow-400 transition-colors;
+  }
+}
